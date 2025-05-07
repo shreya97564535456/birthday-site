@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Wish</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #e91e63;
+            border-radius: 10px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-left: 10px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #d50072;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter your name to get your birthday wish:</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showMessage()">Submit</button>
+
+    <div class="message" id="birthdayMessage"></div>
+
+    <script>
+        function showMessage() {
+            var name = document.getElementById("nameInput").value;
+            if (name.trim() !== "") {
+                document.getElementById("birthdayMessage").innerHTML =
+                    "Happy Birthday, " + name + "!<br>I love you and again Happy Birthday!";
+            } else {
+                alert("Please enter a name!");
+            }
+        }
+    </script>
+
+</body>
+</html>
